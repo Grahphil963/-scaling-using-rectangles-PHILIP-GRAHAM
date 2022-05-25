@@ -37,6 +37,7 @@ namespace Lesson_2_scaling_using_rectangles_PHILIP_GRAHAM
             circleRect = new Rectangle(10, 10, 50, 100);
             rectangleRect = new Rectangle(90, 150, 100, 50);
             circle1 = new Rectangle(200, 10, 50, 100);
+
             
             base.Initialize();  
         }
