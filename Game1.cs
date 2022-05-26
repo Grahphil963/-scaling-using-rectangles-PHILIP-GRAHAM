@@ -16,6 +16,7 @@ namespace Lesson_2_scaling_using_rectangles_PHILIP_GRAHAM
         Texture2D rectangleTexture;
         Rectangle rectangleRect;
         Rectangle circle1;
+        Rectangle circleBackground;
 
         
 
@@ -33,10 +34,11 @@ namespace Lesson_2_scaling_using_rectangles_PHILIP_GRAHAM
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
-            circleRect = new Rectangle(10, 10, 50, 100);
-            rectangleRect = new Rectangle(90, 150, 100, 50);
-            circle1 = new Rectangle(200, 10, 50, 100);
+            // TODO: Add your initialization logic here                                      
+            circleRect = new Rectangle(50, 25, 50, 50);
+            rectangleRect = new Rectangle(65, 125, 150, 50);
+            circle1 = new Rectangle(200, 25, 50, 50);
+            circleBackground = new Rectangle(0, 0, 300, 200);
 
             
             base.Initialize();  
@@ -69,10 +71,12 @@ namespace Lesson_2_scaling_using_rectangles_PHILIP_GRAHAM
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
-            _spriteBatch.Draw(circleTexture, circleRect,Color.Red);
-            _spriteBatch.Draw(circleTexture, circle1, Color.Red);
+            _spriteBatch.Draw(circleTexture, circleBackground, Color.Yellow);
+            _spriteBatch.Draw(circleTexture, circleRect,Color.Black);
+            _spriteBatch.Draw(circleTexture, circle1, Color.Black);
             
             _spriteBatch.Draw(rectangleTexture, rectangleRect,Color.Black);
+            
             
 
 
